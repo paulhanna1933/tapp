@@ -15,7 +15,7 @@ const NewPostButton = props => (
 
 const styles = StyleSheet.create({
   createButton: {
-    width: '95%',
+    width: '65%',
     justifyContent: 'center',
     margin: 20,
     alignSelf: 'center',

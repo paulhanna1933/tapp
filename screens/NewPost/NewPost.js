@@ -19,10 +19,12 @@ export default class NewPost extends Component {
       <Container style={styles.container}>
         <Content>
           <Text style={{ color: 'white', alignSelf: 'center' }}>
-            {' '}
-            CHOOSE A POST TYPE{' '}
+            CHOOSE A POST TYPE
           </Text>
-          <NewPostButton insideText={'Top 3'} />
+          <NewPostButton
+            onPress={() => this.props.navigation.navigate('NewPostCreator')}
+            insideText={'Top 3'}
+          />
 
           <NewPostButton insideText={'GUIDE'} />
 
