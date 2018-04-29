@@ -16,14 +16,14 @@ export default class NewPost extends Component {
   render() {
     const { goBack } = this.props.navigation;
     return (
-      <Container style={styles.container}>
+      <View style={styles.container}>
         <Content>
           <Text style={{ color: 'white', alignSelf: 'center' }}>
             CHOOSE A POST TYPE
           </Text>
           <NewPostButton
             onPress={() => this.props.navigation.navigate('NewPostCreator')}
-            insideText={'Top 3'}
+            insideText={'TOP 3'}
           />
 
           <NewPostButton insideText={'GUIDE'} />
@@ -38,7 +38,7 @@ export default class NewPost extends Component {
 
           <CancelNewPostButton onPress={() => goBack()} insideText={'CANCEL'} />
         </Content>
-      </Container>
+      </View>
     );
   }
 }
