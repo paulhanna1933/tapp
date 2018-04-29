@@ -15,6 +15,7 @@ export default class NewPostCreator extends Component {
     headerTintColor: '#fff'
   };
   render() {
+    const { goBack } = this.props.navigation;
     return (
       <Container style={styles.container}>
         {/* Post Caption Input Field */}
@@ -40,9 +41,7 @@ export default class NewPostCreator extends Component {
         <CategoryRadioButtons />
         {/* Back & Select Choice */}
         <View style={styles.bottomContainer}>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('NewPost')}
-          >
+          <TouchableOpacity onPress={() => goBack()}>
             <Text style={{ marginTop: 12, fontSize: 20, color: 'grey' }}>
               Back
             </Text>
