@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import { Item, Input, Label, Form, Container, Button, Text } from 'native-base';
 
@@ -36,7 +36,21 @@ export default class NewPostCreator extends Component {
         </Button>
 
         {/* Category Selector */}
+        <Text style={styles.textStyle}>Category</Text>
         <CategoryRadioButtons />
+        {/* Back & Select Choice */}
+        <View style={styles.bottomContainer}>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('NewPost')}
+          >
+            <Text style={{ marginTop: 12, fontSize: 20, color: 'grey' }}>
+              Back
+            </Text>
+          </TouchableOpacity>
+          <Button style={styles.fontWeight} rounded success>
+            <Text>SELECT CHOICES</Text>
+          </Button>
+        </View>
       </Container>
     );
   }
@@ -55,5 +69,14 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     paddingBottom: 10,
     fontWeight: '500'
+  },
+  selectedChoicesButton: {
+    fontWeight: '700'
+  },
+  bottomContainer: {
+    paddingTop: 30,
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 });
