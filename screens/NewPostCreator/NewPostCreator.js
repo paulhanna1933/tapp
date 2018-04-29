@@ -5,6 +5,8 @@ import { Item, Input, Label, Form, Container, Button, Text } from 'native-base';
 
 // Importing Category Radio Buttons Component
 import CategoryRadioButtons from '../../components/CategoryRadioButtons/CategoryRadioButtons';
+// Importing Image Upload Component
+import ImageUpload from '../../components/ImageUpload/ImageUpload';
 
 export default class NewPostCreator extends Component {
   static navigationOptions = {
@@ -31,10 +33,7 @@ export default class NewPostCreator extends Component {
         </Item>
 
         {/* Image Upload Button */}
-        <Text style={styles.textStyle}>Image</Text>
-        <Button style={{ marginBottom: 30 }}>
-          <Text>Upload</Text>
-        </Button>
+        <ImageUpload />
 
         {/* Category Selector */}
         <Text style={styles.textStyle}>Category</Text>

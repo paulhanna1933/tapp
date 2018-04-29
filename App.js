@@ -7,16 +7,21 @@ import FeedScreen from './screens/Feed/Feed';
 import NewPostScreen from './screens/NewPost/NewPost';
 import NewPostCreatorScreen from './screens/NewPostCreator/NewPostCreator';
 
-const App = StackNavigator({
-  Feed: {
-    screen: FeedScreen
+const App = StackNavigator(
+  {
+    Feed: {
+      screen: FeedScreen
+    },
+    NewPost: {
+      screen: NewPostScreen
+    },
+    NewPostCreator: {
+      screen: NewPostCreatorScreen
+    }
   },
-  NewPost: {
-    screen: NewPostScreen
-  },
-  NewPostCreator: {
-    screen: NewPostCreatorScreen
+  {
+    initialRouteName: 'NewPostCreator'
   }
-});
+);
 
 export default App;
