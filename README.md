@@ -3,18 +3,16 @@
 ![Alt text](https://monosnap.com/image/vCgVYVyax2EO139QWbs3dapyySAIHC)
 
 # Tools
-* create-react-native-app cli
-* native-base
-* react-navigation
-* react-native-image-picker
-* react-native-simple-radio-button
+* create-react-app cli
+* react-bootstrap
+* react-redux
 
 # Start App
 
-Install CRNA globally, Clone repo, install, cd into folder and run:
+Install CRA globally, Clone repo, install, cd into folder and run:
 ```git
-npm install -g create-react-native-app
+npm install -g create-react-app
 npm install
-npm run ios
+npm start
 ```
 
